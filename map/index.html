@@ -8,16 +8,18 @@
     body {
       margin: 0;
       background: #0b0b0b;
+      overflow: hidden;
       color: #fff;
       font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      overflow-x: hidden;
       text-align: center;
-      padding: 2rem;
+      padding: 4rem 2rem 2rem;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
     }
 
     h1 {
@@ -26,6 +28,8 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 2rem;
+      z-index: 1;
+      position: relative;
       animation: pulse 4s infinite;
     }
 
@@ -39,7 +43,9 @@
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 2rem;
       max-width: 700px;
-      margin-top: 2rem;
+      margin: 0 auto;
+      z-index: 1;
+      position: relative;
     }
 
     .point {
@@ -63,10 +69,14 @@
       margin-top: 4rem;
       font-size: 0.9rem;
       color: #444;
+      z-index: 1;
+      position: relative;
     }
   </style>
 </head>
 <body>
+
+<canvas id="bg"></canvas>
 
   <h1>Карта PlayAI</h1>
 
@@ -84,5 +94,71 @@
     PlayAI Universe Map · 2025
   </footer>
 
+<script>
+const canvas = document.getElementById('bg');
+const ctx = canvas.getContext('2d');
+let width, height;
+let particles = [];
+
+function resize() {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  canvas.width = width;
+  canvas.height = height;
+}
+window.addEventListener('resize', resize);
+resize();
+
+function createParticles() {
+  particles = [];
+  for (let i = 0; i < 80; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5
+    });
+  }
+}
+createParticles();
+
+function draw() {
+  ctx.clearRect(0, 0, width, height);
+
+  for (let p of particles) {
+    p.x += p.vx;
+    p.y += p.vy;
+
+    if (p.x < 0 || p.x > width) p.vx *= -1;
+    if (p.y < 0 || p.y > height) p.vy *= -1;
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+    ctx.fillStyle = '#6cf';
+    ctx.fill();
+  }
+
+  for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
+      const dx = particles[i].x - particles[j].x;
+      const dy = particles[i].y - particles[j].y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < 100) {
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x, particles[i].y);
+        ctx.lineTo(particles[j].x, particles[j].y);
+        ctx.strokeStyle = 'rgba(102, 204, 255, 0.1)';
+        ctx.stroke();
+      }
+    }
+  }
+
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+
 </body>
 </html>
+
