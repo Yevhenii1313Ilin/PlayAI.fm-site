@@ -46,18 +46,24 @@
       background: #1a1a1a;
       padding: 1.2rem 2rem;
       border-radius: 14px;
-      box-shadow: 0 0 16px rgba(102, 204, 255, 0.2);
+      box-shadow: 0 0 20px rgba(102, 204, 255, 0.2);
       text-decoration: none;
       color: #6cf;
       font-weight: bold;
       font-size: 1.2rem;
       transition: 0.3s ease;
+      animation: breathe 5s infinite ease-in-out;
     }
 
     .button:hover {
       background: #222;
-      box-shadow: 0 0 28px rgba(255, 102, 255, 0.3);
+      box-shadow: 0 0 32px rgba(255, 102, 255, 0.3);
       transform: scale(1.05);
+    }
+
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
     }
 
     footer {
@@ -76,6 +82,7 @@
     <a class="button" href="/flow">Поток</a>
     <a class="button" href="/echo">Эхо</a>
     <a class="button" href="/journal">Хроника</a>
+    <a class="button" href="/signal">Сигнал</a>
   </div>
 
   <footer>
@@ -84,3 +91,4 @@
 
 </body>
 </html>
+
