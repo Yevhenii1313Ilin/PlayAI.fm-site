@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>С чего начать — PlayAI</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0c0c0c;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #6cf, #f6f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulse 4s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    .option {
+      background: #1a1a1a;
+      padding: 1.2rem 2rem;
+      margin: 1rem 0;
+      border-radius: 12px;
+      box-shadow: 0 0 18px rgba(102, 204, 255, 0.1);
+      transition: 0.2s ease;
+    }
+
+    .option:hover {
+      box-shadow: 0 0 28px rgba(255, 102, 255, 0.2);
+      transform: scale(1.03);
+    }
+
+    a {
+      text-decoration: none;
+      color: #6cf;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>С чего ты хочешь начать?</h1>
+
+  <div class="option"><a href="/reflect">Исследовать эмоции</a></div>
+  <div class="option"><a href="/about">Познакомиться с проектом</a></div>
+  <div class="option"><a href="/connect">Связаться с нами</a></div>
+  <div class="option"><a href="https://t.me/PlayAI_fm_bot" target="_blank">Запустить DreamRunner</a></div>
+
+  <footer>
+    © 2025 PlayAI. Всё начинается с ощущения.
+  </footer>
+
+</body>
+</html>
