@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlayAI Journal</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #6cf, #f6f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 3rem;
+      animation: pulse 4s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .entries {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .entry {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 14px;
+      box-shadow: 0 0 16px rgba(102, 204, 255, 0.2);
+      text-align: left;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .date {
+      font-size: 1rem;
+      color: #6cf;
+      margin-bottom: 0.5rem;
+    }
+
+    .description {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .quote {
+      font-size: 1rem;
+      color: #ccc;
+      font-style: italic;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>PlayAI Journal</h1>
+
+  <div class="entries">
+    <div class="entry">
+      <div class="date">2025-04-27</div>
+      <div class="description">Portal breathing animation updated</div>
+      <div class="quote">«Тишина тоже дышит»</div>
+    </div>
+
+    <div class="entry">
+      <div class="date">2025-04-26</div>
+      <div class="description">Universe light flow connected</div>
+      <div class="quote">«Мы — нити света в пустоте»</div>
+    </div>
+
+    <div class="entry">
+      <div class="date">2025-04-25</div>
+      <div class="description">Dream map launched</div>
+      <div class="quote">«Каждое решение — как дыхание сознания»</div>
+    </div>
+
+    <div class="entry">
+      <div class="date">2025-04-24</div>
+      <div class="description">Reflect emotional log opened</div>
+      <div class="quote">«Слушая себя, мы строим вселенную»</div>
+    </div>
+  </div>
+
+  <footer>
+    PlayAI Journal · 2025
+  </footer>
+
+</body>
+</html>
