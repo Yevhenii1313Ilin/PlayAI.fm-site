@@ -3,94 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reflect — PlayAI.life</title>
+  <title>PlayAI — голос твоей жизни</title>
   <style>
     body {
       margin: 0;
       padding: 2rem;
       background-color: #0c0c0c;
-      color: #f0f0f0;
+      color: #fff;
       font-family: 'Segoe UI', sans-serif;
+      text-align: center;
     }
 
     h1 {
-      font-size: 2.8rem;
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #fff;
-      text-shadow: 0 0 12px #6cf, 0 0 32px #f6f;
-      animation: pulse 3s ease-in-out infinite;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #6cf, #f6f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     }
 
-    @keyframes pulse {
-      0%, 100% { text-shadow: 0 0 12px #6cf, 0 0 32px #f6f; }
-      50% { text-shadow: 0 0 24px #0ff, 0 0 48px #f0f; }
-    }
-
-    h2 {
-      color: #6cf;
-      border-bottom: 1px solid #444;
-      padding-bottom: 4px;
-      margin-top: 3rem;
-    }
-
-    .block {
-      background: #1a1a1a;
-      border-radius: 16px;
-      padding: 1.5rem;
-      margin-top: 1rem;
-      box-shadow: 0 0 20px rgba(102, 204, 255, 0.1);
-      transition: 0.3s ease;
-    }
-
-    .block:hover {
-      box-shadow: 0 0 28px rgba(255, 102, 255, 0.2);
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
     }
 
     .button {
       display: inline-block;
-      margin-top: 1rem;
+      margin-top: 2rem;
       background: linear-gradient(90deg, #6cf, #f6f);
       color: #000;
-      padding: 12px 24px;
-      border-radius: 10px;
-      font-weight: bold;
+      padding: 14px 28px;
+      border-radius: 12px;
       text-decoration: none;
+      font-weight: bold;
       transition: 0.3s ease;
     }
 
     .button:hover {
+      transform: scale(1.05);
       filter: brightness(1.1);
-      transform: scale(1.02);
+    }
+
+    nav {
+      margin-top: 3rem;
+    }
+
+    nav a {
+      color: #6cf;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
 
-  <h1>PlayAI Reflect — твоя карта эмоций</h1>
+  <h1>PlayAI — голос твоей жизни</h1>
+  <p>Музыка. Эмоции. Осознанность. Добро пожаловать в PlayAI.</p>
 
-  <h2>Сегодня</h2>
-  <div class="block">
-    <p><strong>Эмоция:</strong> Ожидание света</p>
-    <p><strong>Фраза от AI:</strong> «Ты внутри движения. Вдохни, и оно будет твоим»</p>
-    <a class="button" href="https://t.me/PlayAI_fm_bot" target="_blank">Записать в дневник</a>
-  </div>
+  <a class="button" href="https://t.me/PlayAI_fm_bot" target="_blank">Запустить DreamRunner</a>
 
-  <h2>Неделя</h2>
-  <div class="block">
-    <p>Пн — Фокус</p>
-    <p>Вт — Тревога</p>
-    <p>Ср — Принятие</p>
-    <p>Чт — Освобождение</p>
-    <p>Пт — Радость</p>
-  </div>
+  <nav>
+    <a href="/reflect">Reflect</a>
+    <a href="/about">О нас</a>
+    <a href="/connect">Контакты</a>
+  </nav>
 
-  <h2>Месяц</h2>
-  <div class="block">
-    <p><strong>Общее состояние:</strong> Возвращение к себе</p>
-    <p><strong>Треков в дневнике:</strong> 53</p>
-    <p><strong>Всплески чувств:</strong> 9</p>
-  </div>
+  <footer>
+    © 2025 PlayAI.fm — создано вместе с AI
+  </footer>
 
 </body>
 </html>
+
