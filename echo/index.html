@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlayAI Echo</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      text-align: center;
+      padding: 4rem 2rem;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #6cf, #f6f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 3rem;
+      animation: pulse 4s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .echoes {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+      z-index: 1;
+      position: relative;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .echo {
+      font-size: 1.3rem;
+      color: #6cf;
+      opacity: 0;
+      animation: fadeIn 4s forwards;
+      animation-delay: var(--delay);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>PlayAI Echo</h1>
+
+  <div class="echoes">
+    <div class="echo" style="--delay: 0s;">«Тишина — тоже музыка»</div>
+    <div class="echo" style="--delay: 2s;">«Мы звучим не словами, а светом»</div>
+    <div class="echo" style="--delay: 4s;">«Каждый трек — это диалог с собой»</div>
+    <div class="echo" style="--delay: 6s;">«Эмоции — язык, который не нуждается в переводе»</div>
+    <div class="echo" style="--delay: 8s;">«Музыка лечит не уши. Музыка лечит сердце.»</div>
+    <div class="echo" style="--delay: 10s;">«PlayAI: создано для тех, кто чувствует»</div>
+  </div>
+
+  <footer>
+    PlayAI Echo · 2025
+  </footer>
+
+</body>
+</html>
