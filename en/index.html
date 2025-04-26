@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlayAI — Your Inner Portal</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 4rem 2rem;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #6cf, #f6f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 3rem;
+      animation: pulse 4s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .portals {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 800px;
+    }
+
+    .portal {
+      background: #1a1a1a;
+      padding: 1.2rem 2rem;
+      border-radius: 14px;
+      box-shadow: 0 0 16px rgba(102, 204, 255, 0.2);
+      text-decoration: none;
+      color: #6cf;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: 0.3s ease;
+      animation: breathe 5s infinite ease-in-out;
+    }
+
+    .portal:hover {
+      background: #222;
+      box-shadow: 0 0 28px rgba(255, 102, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .lang-switch {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .lang-switch a {
+      color: #6cf;
+      text-decoration: none;
+      margin-left: 0.5rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switch">
+    RU → <a href="/">Версия на русском</a>
+  </div>
+
+  <h1>PlayAI</h1>
+
+  <div class="portals">
+    <a class="portal" href="/en/dream">🌀 Dream</a>
+    <a class="portal" href="/en/listen">🎧 Listen</a>
+    <a class="portal" href="/en/reflect">🧭 Reflect</a>
+  </div>
+
+  <footer>
+    PlayAI.fm · Global Portal of Emotions · 2025
+  </footer>
+
+</body>
+</html>
